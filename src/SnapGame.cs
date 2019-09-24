@@ -28,17 +28,22 @@ namespace CardGames
 			}
 			if (myGame.IsStarted)
 			{
-				if ( SwinGame.KeyTyped(KeyCode.vk_LSHIFT) && SwinGame.KeyCode(KeyCode.vk_RSHIFT))
+				if ( SwinGame.KeyTyped(KeyCode.vk_LSHIFT) && SwinGame.KeyTyped(KeyCode.vk_RSHIFT))
 				{
-				
+					SwinGame.LoadSoundEffectNamed("Slap", "Slap.wav");
+					SwinGame.PlaySoundEffect("Slap");
 				}
 				else if (SwinGame.KeyTyped(KeyCode.vk_LSHIFT))
 				{
 					myGame.PlayerHit(0);
+					SwinGame.LoadSoundEffectNamed("Sword1", "Sword1.wav");
+					SwinGame.PlaySoundEffect("Sword1");
 				}
 				else if (SwinGame.KeyTyped(KeyCode.vk_RSHIFT))
 				{
 					myGame.PlayerHit(1);
+					SwinGame.LoadSoundEffectNamed("Sword2", "Sword2.wav");
+					SwinGame.PlaySoundEffect("Sword2");
 				}
 			}
 		}
